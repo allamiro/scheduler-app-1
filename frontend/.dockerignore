@@ -1,0 +1,7 @@
+node_modules
+.next
+.env*
+.eslintcache
+*.log
+.vscode
+.idea
