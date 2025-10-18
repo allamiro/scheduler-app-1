@@ -9,6 +9,27 @@ backend/   FastAPI app with SQLite persistence and REST endpoints for doctors, s
 frontend/  Next.js 14 application styled with Tailwind CSS and a Vite-inspired hero experience
 ```
 
+## Quick start with Docker Compose
+
+You can build and run both applications together without installing Python or Node.js locally:
+
+```bash
+docker compose up --build
+```
+
+Once the containers are healthy:
+
+- Frontend: <http://localhost:3001>
+- API docs: <http://localhost:8001/docs>
+
+The SQLite database inside the backend container starts empty. Load the demo data after the services are running:
+
+```bash
+docker compose exec api python seed_data.py
+```
+
+Stop the stack with `docker compose down`. Each run creates a fresh SQLite file inside the container; re-run the seeding command whenever you restart the services.
+
 ## Backend
 
 ### Features
