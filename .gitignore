@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 .env
+.env.local
 .venv
 backend/scheduler.db
 node_modules/
